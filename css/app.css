@@ -2,15 +2,95 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#footer {
+.body-home {
+  background-color: #3772FF;
+  background-image: url(../image/figure_2.png);
+  background-repeat: no-repeat;
+  background-position: 100% 30%;
+}
+
+.d-none {
+  display: none;
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #FFFFFF;
+}
+.main-home-logo {
+  margin: 1.5rem;
+}
+.main-home-title {
+  font-weight: 600;
+  margin: 1rem;
+}
+.main-home-desc {
+  margin: 1rem;
+  text-align: center;
+  line-height: 1.3;
+}
+.main-home-menu {
+  display: flex;
+  flex-direction: column;
+}
+.main-home-figure {
+  width: 100%;
+  margin: 1.5rem auto -4rem;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-background {
   position: absolute;
-  left: 0;
+  width: 100%;
+  z-index: -1;
+  max-height: 40%;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-menu-item {
+  padding: 2rem;
+}
+.nav-paws {
+  position: absolute;
+  top: 0;
   right: 0;
-  bottom: 0;
+}
+.nav-profile {
+  padding: 2rem;
+}
+
+#footer {
   text-align: center;
   background-color: #36D6AD;
-  color: #ffffff;
-  padding: 40px 20px;
+  color: #FFFFFF;
+  padding: 2.5rem 1.25rem;
+}
+
+.btn {
+  background-color: #FC7071;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+.btn-shadow {
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=app.css.map */
