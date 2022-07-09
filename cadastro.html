@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body class="body">
+    <div id="nav" class="nav nav-paws-active"></div>
+    <main class="main-home">
+        <img src="./image/logo-blue.svg" alt="Adopet" class="main-home-logo">
+        <p class="main-home-desc main-home-desc-blue">
+            Ainda não tem cadastro?
+        </p>
+        <p class="main-home-desc main-home-desc-blue">
+            Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
+        </p>
+        <form class="form">
+            <fieldset class="form-fieldset">
+                <label for="email" class="form-fieldset-label">Email</label>
+                <input type="text" id="email" class="form-fieldset-field" placeholder="Escolha o seu melhor email" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="name" class="form-fieldset-label">Nome</label>
+                <input type="text" id="name" class="form-fieldset-field" placeholder="Digite o seu nome completo" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="password" class="form-fieldset-label">Senha</label>
+                <input type="password" id="password" class="form-fieldset-field form-fieldset-field-password"
+                    placeholder="Crie uma senha" />
+                <i class="fa-regular fa-eye-slash form-fieldset-eye"></i>
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="conf_password" class="form-fieldset-label">Confirma sua senha</label>
+                <input type="password" id="conf_password" class="form-fieldset-field form-fieldset-field-password"
+                    placeholder="Repita a senha criada acima" />
+                <i class="fa-regular fa-eye-slash form-fieldset-eye"></i>
+            </fieldset>
+            <button class="btn m-1">Cadastrar</button>
+        </form>
+    </main>
+    <footer id="footer" clas="footer"></footer>
+
+    <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous"></script>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./js/default.js"></script>
+</body>
+
+</html>

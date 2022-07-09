@@ -1,11 +1,28 @@
 @use '../1_base/variables'
 @use '../1_base/base_mixins'
+@use '_layouts_mixins'
+
+body
+    color: variables.$primary-text
+    font-family: 'Poppins', sans-serif
 
 .body-home
     background-color: variables.$secondary-color
-    background-image: url(../image/figure_2.png)
-    background-repeat: no-repeat
+    color: variables.$secondary-text
     background-position: 100% 30%
+    @include layouts_mixins.rightBackground
+
+.body
+    @include layouts_mixins.leftBackground
+    background-position: 0 70%
+
+    @include base_mixins.md
+        @include layouts_mixins.rightBackground
+        background-position: 100% 50%
+
+    @include base_mixins.lg
+        @include layouts_mixins.rightBackground
+        background-position: 100% 50%
 
 .d-none
     display: none
@@ -15,7 +32,6 @@
     flex-direction: column
     align-items: center
     padding: 2rem
-    color: variables.$secondary-text
 
     @include base_mixins.md
         max-width: 50%
@@ -40,6 +56,9 @@
         text-align: center
         line-height: 1.3
 
+        &-blue
+            color: variables.$secondary-color
+
     &-menu
         display: flex
         flex-direction: column
@@ -52,3 +71,6 @@
 
 h1
     font-size: 1.5rem
+
+.m-1
+    margin: 1rem!important
