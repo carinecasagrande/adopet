@@ -1,4 +1,5 @@
 @use '../1_base/variables'
+@use '../1_base/base_mixins'
 
 .nav
     position: relative
@@ -11,6 +12,12 @@
         z-index: -1
         max-height: 40%
 
+        @include base_mixins.md
+            width: auto
+
+        @include base_mixins.lg
+            width: auto
+
     &-menu
         display: flex
         align-items: center
@@ -18,6 +25,19 @@
 
         &-item
             padding: 2rem
+
+            &-logo
+                display: none
+                max-width: 150px
+
+                img
+                    width: 100%
+
+                @include base_mixins.md
+                    display: block
+
+                @include base_mixins.lg
+                    display: block
 
     &-paws
         position: absolute

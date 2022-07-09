@@ -1,4 +1,5 @@
 @use '../1_base/variables'
+@use '../1_base/base_mixins'
 
 .body-home
     background-color: variables.$secondary-color
@@ -16,12 +17,23 @@
     padding: 2rem
     color: variables.$secondary-text
 
+    @include base_mixins.md
+        max-width: 50%
+        margin: 5rem auto 0
+
+    @include base_mixins.lg
+        width: 35%
+        margin: 0 auto
+        padding: 0
+
     &-logo
         margin: 1.5rem
+        width: 50%
 
     &-title
         font-weight: 600
         margin: 1rem
+        text-align: center
 
     &-desc
         margin: 1rem
@@ -36,6 +48,7 @@
         width: 100%
         margin: 1.5rem auto -4rem
         z-index: -1
+        max-width: 300px
 
 h1
     font-size: 1.5rem
