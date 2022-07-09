@@ -14,7 +14,7 @@ body {
 .body {
   background-image: url(../image/figure_3.png);
   background-repeat: no-repeat;
-  background-position: 0 70%;
+  background-position: 0 75%;
 }
 @media (max-width: 768px) and (min-width: 480px) {
   .body {
@@ -88,6 +88,13 @@ h1 {
 
 .m-1 {
   margin: 1rem !important;
+}
+
+.link-forgot-password {
+  font-size: 0.9rem;
+  color: #FC7071;
+  text-decoration: underline;
+  margin: 1rem;
 }
 
 .nav {

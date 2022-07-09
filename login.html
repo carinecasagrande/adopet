@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body class="body">
+    <div id="nav" class="nav nav-paws-active"></div>
+    <main class="main-home">
+        <img src="./image/logo-blue.svg" alt="Adopet" class="main-home-logo">
+        <p class="main-home-desc main-home-desc-blue">
+            Já tem conta? Faça seu login:
+        </p>
+        <form class="form">
+            <fieldset class="form-fieldset">
+                <label for="email" class="form-fieldset-label">Email</label>
+                <input type="text" id="email" class="form-fieldset-field" placeholder="Insira seu email" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="password" class="form-fieldset-label">Senha</label>
+                <input type="password" id="password" class="form-fieldset-field form-fieldset-field-password"
+                    placeholder="Insira sua senha" />
+                <i class="fa-regular fa-eye-slash form-fieldset-eye"></i>
+            </fieldset>
+            <a href="#" class="link-forgot-password">Esqueci minha senha.</a>
+            <button class="btn m-1">Entrar</button>
+        </form>
+    </main>
+    <footer id="footer" clas="footer"></footer>
+
+    <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous"></script>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./js/default.js"></script>
+</body>
+
+</html>
