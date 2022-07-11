@@ -5,14 +5,9 @@
 body
     color: variables.$primary-text
     font-family: 'Poppins', sans-serif
+    line-height: 1.2
 
-.body-home
-    background-color: variables.$secondary-color
-    color: variables.$secondary-text
-    background-position: 100% 30%
-    @include layouts_mixins.rightBackground
-
-.body
+.background
     @include layouts_mixins.leftBackground
     background-position: 0 75%
 
@@ -24,23 +19,34 @@ body
         @include layouts_mixins.rightBackground
         background-position: 100% 50%
 
-.d-none
-    display: none
+.background-home
+    background-color: variables.$secondary-color
+    color: variables.$secondary-text
+    background-position: 100% 30%
+    @include layouts_mixins.rightBackground
 
 .main-home
     display: flex
     flex-direction: column
     align-items: center
-    padding: 2rem
 
     @include base_mixins.md
         max-width: 50%
         margin: 5rem auto 0
 
     @include base_mixins.lg
-        width: 35%
-        margin: 0 auto
+        width: 40%
+        margin: 5rem auto 0
         padding: 0
+
+    &-pet
+        @include base_mixins.md
+            padding: 3rem
+            margin-top: 3rem
+
+        @include base_mixins.lg
+            padding: 5rem
+            margin-top: 3rem
 
     &-logo
         margin: 1.5rem
@@ -59,6 +65,11 @@ body
         &-blue
             color: variables.$secondary-color
 
+        &-pet
+            padding: 0 3rem
+            z-index: 1
+            margin-top: 3rem
+
     &-menu
         display: flex
         flex-direction: column
@@ -75,8 +86,27 @@ h1
 .m-1
     margin: 1rem!important
 
+.m-0
+    margin: 0!important
+
+.p-1
+    padding: 1rem!important
+
+.p-2
+    padding: 2rem!important
+
 .link-forgot-password
     font-size: .9rem
     color: variables.$tertiary-color
     text-decoration: underline
     margin: 1rem
+
+.card-group
+    display: grid
+    gap: 1rem
+
+    @include base_mixins.md
+        grid-template-columns: 1fr 1fr
+
+    @include base_mixins.lg
+        grid-template-columns: 1fr 1fr 1fr

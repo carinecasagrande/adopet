@@ -47,7 +47,35 @@
 
     &-profile
         padding: 2rem
+        display: none
+        align-items: center
+
+        img
+            width: 40px
 
 .nav-paws-active
     .nav-paws
         display: block
+
+.nav-profile-active
+    .nav-profile
+        display: flex
+
+.nav-invert-index
+    .nav-background
+        z-index: auto
+
+        @include base_mixins.md
+            z-index: -1
+
+        @include base_mixins.lg
+            z-index: -1
+
+    .nav-menu,.nav-profile
+        z-index: 1
+
+        @include base_mixins.md
+            z-index: auto
+
+        @include base_mixins.lg
+            z-index: auto

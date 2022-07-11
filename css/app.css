@@ -1,9 +1,30 @@
 body {
   color: #737380;
   font-family: "Poppins", sans-serif;
+  line-height: 1.2;
 }
 
-.body-home {
+.background {
+  background-image: url(../image/figure_3.png);
+  background-repeat: no-repeat;
+  background-position: 0 75%;
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .background {
+    background-image: url(../image/figure_2.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+  }
+}
+@media (min-width: 769px) {
+  .background {
+    background-image: url(../image/figure_2.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+  }
+}
+
+.background-home {
   background-color: #3772FF;
   color: #FFFFFF;
   background-position: 100% 30%;
@@ -11,35 +32,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.body {
-  background-image: url(../image/figure_3.png);
-  background-repeat: no-repeat;
-  background-position: 0 75%;
-}
-@media (max-width: 768px) and (min-width: 480px) {
-  .body {
-    background-image: url(../image/figure_2.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-  }
-}
-@media (min-width: 769px) {
-  .body {
-    background-image: url(../image/figure_2.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-  }
-}
-
-.d-none {
-  display: none;
-}
-
 .main-home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 }
 @media (max-width: 768px) and (min-width: 480px) {
   .main-home {
@@ -49,9 +45,21 @@ body {
 }
 @media (min-width: 769px) {
   .main-home {
-    width: 35%;
-    margin: 0 auto;
+    width: 40%;
+    margin: 5rem auto 0;
     padding: 0;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .main-home-pet {
+    padding: 3rem;
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 769px) {
+  .main-home-pet {
+    padding: 5rem;
+    margin-top: 3rem;
   }
 }
 .main-home-logo {
@@ -70,6 +78,11 @@ body {
 }
 .main-home-desc-blue {
   color: #3772FF;
+}
+.main-home-desc-pet {
+  padding: 0 3rem;
+  z-index: 1;
+  margin-top: 3rem;
 }
 .main-home-menu {
   display: flex;
@@ -90,11 +103,38 @@ h1 {
   margin: 1rem !important;
 }
 
+.m-0 {
+  margin: 0 !important;
+}
+
+.p-1 {
+  padding: 1rem !important;
+}
+
+.p-2 {
+  padding: 2rem !important;
+}
+
 .link-forgot-password {
   font-size: 0.9rem;
   color: #FC7071;
   text-decoration: underline;
   margin: 1rem;
+}
+
+.card-group {
+  display: grid;
+  gap: 1rem;
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .card-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 769px) {
+  .card-group {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .nav {
@@ -151,10 +191,46 @@ h1 {
 }
 .nav-profile {
   padding: 2rem;
+  display: none;
+  align-items: center;
+}
+.nav-profile img {
+  width: 40px;
 }
 
 .nav-paws-active .nav-paws {
   display: block;
+}
+
+.nav-profile-active .nav-profile {
+  display: flex;
+}
+
+.nav-invert-index .nav-background {
+  z-index: auto;
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .nav-invert-index .nav-background {
+    z-index: -1;
+  }
+}
+@media (min-width: 769px) {
+  .nav-invert-index .nav-background {
+    z-index: -1;
+  }
+}
+.nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+  z-index: 1;
+}
+@media (max-width: 768px) and (min-width: 480px) {
+  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+    z-index: auto;
+  }
+}
+@media (min-width: 769px) {
+  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+    z-index: auto;
+  }
 }
 
 #footer {
@@ -214,6 +290,41 @@ h1 {
   position: absolute;
   bottom: 0.8rem;
   right: 0.4rem;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #F6F6F6;
+  flex-wrap: wrap;
+}
+.card-image {
+  width: 120px;
+  padding: 0.5rem;
+}
+.card-info {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.card-info-name {
+  font-weight: 700;
+  color: #3772FF;
+  margin-bottom: 1rem;
+}
+.card-info-city {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.card-info-contact {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.card-info-contact img {
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=app.css.map */
