@@ -45,7 +45,8 @@
         right: 0
         display: none
 
-    &-profile
+    &-profile,
+    &-profile-user-img
         padding: 2rem
         display: none
         align-items: center
@@ -61,6 +62,10 @@
     .nav-profile
         display: flex
 
+.nav-profile-user
+    .nav-profile-user-img
+        display: flex
+
 .nav-invert-index
     .nav-background
         z-index: auto
@@ -71,7 +76,7 @@
         @include base_mixins.lg
             z-index: -1
 
-    .nav-menu,.nav-profile
+    .nav-menu,.nav-profile,.nav-profile-user-img
         z-index: 1
 
         @include base_mixins.md

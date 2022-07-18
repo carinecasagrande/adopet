@@ -142,6 +142,11 @@ h1 {
   }
 }
 
+textarea {
+  resize: vertical;
+  width: 100% !important;
+}
+
 .nav {
   position: relative;
   display: flex;
@@ -194,12 +199,12 @@ h1 {
   right: 0;
   display: none;
 }
-.nav-profile {
+.nav-profile, .nav-profile-user-img {
   padding: 2rem;
   display: none;
   align-items: center;
 }
-.nav-profile img {
+.nav-profile img, .nav-profile-user-img img {
   width: 40px;
 }
 
@@ -208,6 +213,10 @@ h1 {
 }
 
 .nav-profile-active .nav-profile {
+  display: flex;
+}
+
+.nav-profile-user .nav-profile-user-img {
   display: flex;
 }
 
@@ -224,16 +233,16 @@ h1 {
     z-index: -1;
   }
 }
-.nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+.nav-invert-index .nav-menu, .nav-invert-index .nav-profile, .nav-invert-index .nav-profile-user-img {
   z-index: 1;
 }
 @media (max-width: 768px) and (min-width: 480px) {
-  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile, .nav-invert-index .nav-profile-user-img {
     z-index: auto;
   }
 }
 @media (min-width: 769px) {
-  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile {
+  .nav-invert-index .nav-menu, .nav-invert-index .nav-profile, .nav-invert-index .nav-profile-user-img {
     z-index: auto;
   }
 }
@@ -248,7 +257,7 @@ h1 {
 .btn {
   background-color: #FC7071;
   border-radius: 0.3rem;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
   margin: 0.5rem;
   text-align: center;
   font-weight: 600;
@@ -296,20 +305,37 @@ h1 {
   bottom: 0.8rem;
   right: 0.4rem;
 }
-.form-contact {
+.form-background {
   background: #F6F6F6;
   padding: 1rem;
   border-radius: 10px;
 }
-.form-contact-fieldset-label {
+.form-background-title {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.form-background-fieldset-label {
   text-align: left;
   font-weight: 700;
   color: #3772FF;
   align-self: flex-start;
 }
-.form-contact-fieldset-field {
+.form-background-fieldset-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.form-background-fieldset-field {
   background: #ffffff;
   text-align: left;
+}
+
+.caption-profile-image {
+  font-weight: 0.8rem;
+  color: #FC7071;
+  text-align: center;
+  margin: 0.5rem 0 0;
 }
 
 .card {
