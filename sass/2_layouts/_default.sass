@@ -11,6 +11,10 @@ body
     @include layouts_mixins.leftBackground
     background-position: 0 75%
 
+    &-sm-none
+        @include base_mixins.sm
+            background: none
+
     @include base_mixins.md
         @include layouts_mixins.rightBackground
         background-position: 100% 50%

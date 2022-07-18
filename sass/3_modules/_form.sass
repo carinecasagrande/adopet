@@ -1,3 +1,5 @@
+@use '../1_base/variables'
+
 .form
     width: 100%
     display: flex
@@ -34,3 +36,18 @@
             position: absolute
             bottom: 0.8rem
             right: 0.4rem
+
+    &-contact
+        background: #F6F6F6
+        padding: 1rem
+        border-radius: 10px
+
+        &-fieldset-label
+            text-align: left
+            font-weight: 700
+            color: variables.$secondary-color
+            align-self: flex-start
+
+        &-fieldset-field
+            background: #ffffff
+            text-align: left
