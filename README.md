@@ -1,16 +1,13 @@
+# Adopet
+Resolution of the fourth frontend challenge proposed by [Alura](https://www.alura.com.br/).
 
-# Adopet - Alura Challenge Front-End 4ª Edição
+### Result
+The result can be seen [here](https://carinecasagrande.github.io/adopet/).
 
-### Tecnologias
--   HTML
--   SASS
+### Technologies
+- HTML
+- SASS
 
-### Recursos e Tutoriais
-
--   [Alura](https://www.alura.com.br/)
--   [Figma](https://www.figma.com/file/rrDiDohYmgqC5YU4Z2WxJw/Alura-Challenges-Frontend-(Adopet)?node-id=518%3A306)
-
-### Autor
-
--   [LinkedIn](https://www.linkedin.com/in/carinecasagrande/)
--   [GitHub](https://github.com/carinecasagrande)
+### Author
+- [LinkedIn](https://www.linkedin.com/in/carinecasagrande/)
+- [GitHub](https://github.com/carinecasagrande)
