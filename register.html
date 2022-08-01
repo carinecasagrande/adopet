@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/app.css">
 </head>
@@ -24,7 +25,7 @@
         <p class="main-home-desc main-home-desc-blue">
             Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
         </p>
-        <form class="form">
+        <form class="form" id="form-register">
             <fieldset class="form-fieldset">
                 <label for="email" class="form-fieldset-label">Email</label>
                 <input type="email" id="email" class="form-fieldset-field" placeholder="Escolha o seu melhor email" />
@@ -36,22 +37,24 @@
             <fieldset class="form-fieldset">
                 <label for="password" class="form-fieldset-label">Senha</label>
                 <input type="password" id="password" class="form-fieldset-field form-fieldset-field-password"
-                    placeholder="Crie uma senha" />
+                    placeholder="Crie uma senha" autocomplete="false">
                 <i class="fa-regular fa-eye-slash form-fieldset-eye" data-id="password"></i>
             </fieldset>
             <fieldset class="form-fieldset">
                 <label for="conf_password" class="form-fieldset-label">Confirma sua senha</label>
                 <input type="password" id="conf_password" class="form-fieldset-field form-fieldset-field-password"
-                    placeholder="Repita a senha criada acima" />
+                    placeholder="Repita a senha criada acima" autocomplete="false"/>
                 <i class="fa-regular fa-eye-slash form-fieldset-eye" data-id="conf_password"></i>
             </fieldset>
-            <button class="btn m-1">Cadastrar</button>
+            <button class="btn m-1" type="button" id="btn-register">Cadastrar</button>
         </form>
     </main>
     <footer id="footer" clas="footer"></footer>
     <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous"></script>
     <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="./js/default.js"></script>
+    <script src="./js/register.js"></script>
 </body>
 
 </html>

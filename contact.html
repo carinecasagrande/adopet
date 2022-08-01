@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/app.css">
 </head>
@@ -20,7 +21,7 @@
         <p class="main-home-desc main-home-desc-blue">
             Envie uma mensagem para a pessoa ou instituição que está cuidado do animal:
         </p>
-        <form class="form form-background">
+        <form class="form form-background" id="form-contact">
             <fieldset class="form-fieldset">
                 <label for="name" class="form-fieldset-label form-background-fieldset-label">Nome</label>
                 <input type="text" id="name" class="form-fieldset-field form-background-fieldset-field"
@@ -41,13 +42,16 @@
                 <textarea id="message" class="form-fieldset-field form-background-fieldset-field"
                     placeholder="Escreva sua mensagem" rows="5"></textarea>
             </fieldset>
-            <button class="btn m-1">Enviar</button>
+            <button class="btn m-1" type="button" id="btn-contact">Enviar</button>
         </form>
     </main>
     <footer id="footer" clas="footer"></footer>
     <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous"></script>
     <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script src="./lib/jQuery-Mask-Plugin/dist/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="./js/default.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 
 </html>

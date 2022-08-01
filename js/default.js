@@ -7,6 +7,16 @@ $(function () {
     initializeToastr();
 });
 
+function isPhone(phone) {
+    phone = phone.replace(/[^0-9]/g, '');
+
+    if (phone.length < 10 || phone.length > 11) {
+        return false;
+    }
+
+    return true;
+}
+
 function togglePasswordInput(elem) {
     var id = $(elem).attr("data-id");
     if ($(elem).hasClass("fa-eye-slash")) {

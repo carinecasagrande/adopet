@@ -7,9 +7,9 @@ const firebaseConfig = {
     appId: "1:459110770331:web:8de035d6cbb92cf7e7483e"
 };
 
-$(function () {
-    firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
+$(function () {
     $(document).on("click", "#btn-login", function () {
         login();
     });
