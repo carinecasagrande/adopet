@@ -9,12 +9,12 @@ body {
   background-repeat: no-repeat;
   background-position: 0 75%;
 }
-@media (max-width: 479px) {
+@media (max-width: 561px) {
   .background-sm-none {
     background: none;
   }
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .background {
     background-image: url(../image/figure_2.png);
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .main-home {
     max-width: 50%;
     margin: 5rem auto 0;
@@ -55,7 +55,7 @@ body {
     padding: 0;
   }
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .main-home-pet {
     padding: 3rem;
     margin-top: 3rem;
@@ -131,7 +131,7 @@ h1 {
   display: grid;
   gap: 1rem;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .card-group {
     grid-template-columns: 1fr 1fr;
   }
@@ -158,7 +158,7 @@ textarea {
   z-index: -1;
   max-height: 40%;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .nav-background {
     width: auto;
   }
@@ -183,7 +183,7 @@ textarea {
 .nav-menu-item-logo img {
   width: 100%;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .nav-menu-item-logo {
     display: block;
   }
@@ -223,7 +223,7 @@ textarea {
 .nav-invert-index .nav-background {
   z-index: auto;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .nav-invert-index .nav-background {
     z-index: -1;
   }
@@ -236,7 +236,7 @@ textarea {
 .nav-invert-index .nav-menu, .nav-invert-index .nav-profile, .nav-invert-index .nav-profile-user-img {
   z-index: 1;
 }
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 562px) {
   .nav-invert-index .nav-menu, .nav-invert-index .nav-profile, .nav-invert-index .nav-profile-user-img {
     z-index: auto;
   }
@@ -257,12 +257,13 @@ textarea {
 .btn {
   background-color: #FC7071;
   border-radius: 0.3rem;
-  padding: 0.6rem 2 rem;
+  padding: 0.6rem 2rem;
   margin: 0.5rem;
   text-align: center;
   font-weight: 600;
   color: #FFFFFF;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 .btn-shadow {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
@@ -336,6 +337,10 @@ textarea {
   color: #FC7071;
   text-align: center;
   margin: 0.5rem 0 0;
+}
+
+.form-fieldset-eye {
+  cursor: pointer;
 }
 
 .card {
