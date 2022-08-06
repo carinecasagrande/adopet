@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+    <script src="./js/default.js" defer></script>
+    <script src="./js/register.js" defer></script>
+</head>
+
+<body class="background">
+    <!-- NAVBAR -->
+    <div id="nav" class="nav nav-paws-active">
+        <%- include('./template/nav'); %>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main-home p-2">
+        <img src="./image/logo-blue.svg" alt="Adopet" class="main-home-logo">
+        <p class="main-home-desc main-home-desc-blue">
+            Ainda não tem cadastro?
+        </p>
+        <p class="main-home-desc main-home-desc-blue">
+            Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
+        </p>
+        <form class="form" id="form-register">
+            <fieldset class="form-fieldset">
+                <label for="email" class="form-fieldset-label">Email</label>
+                <input type="email" id="email" name="email" class="form-fieldset-field"
+                    placeholder="Escolha o seu melhor email" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="name" class="form-fieldset-label">Nome</label>
+                <input type="text" id="name" name="name" class="form-fieldset-field"
+                    placeholder="Digite o seu nome completo" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="password" class="form-fieldset-label">Senha</label>
+                <input type="password" id="password" name="password"
+                    class="form-fieldset-field form-fieldset-field-password" placeholder="Crie uma senha"
+                    autocomplete="false">
+                <i class="fa-regular fa-eye-slash form-fieldset-eye" data-id="password"></i>
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="conf_password" class="form-fieldset-label">Confirma sua senha</label>
+                <input type="password" id="conf_password" name="conf_password"
+                    class="form-fieldset-field form-fieldset-field-password" placeholder="Repita a senha criada acima"
+                    autocomplete="false" />
+                <i class="fa-regular fa-eye-slash form-fieldset-eye" data-id="conf_password"></i>
+            </fieldset>
+            <button class="btn m-1" type="button" id="btn-register">Cadastrar</button>
+            <a href="/login"><small>Já possui cadastro? Faça login.</small></a>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('./template/footer'); %>
+</body>
+
+</html>

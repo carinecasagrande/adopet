@@ -1,0 +1,131 @@
+@use '../1_base/variables'
+@use '../1_base/base_mixins'
+@use '_layouts_mixins'
+
+html,
+body
+    height: 100%
+
+body
+    color: variables.$primary-text
+    font-family: 'Poppins', sans-serif
+    line-height: 1.2
+    display: flex
+    flex-direction: column
+
+.background
+    @include layouts_mixins.leftBackground
+    background-position: 0 75%
+
+    &-sm-none
+        @include base_mixins.sm
+            background: none
+
+    @include base_mixins.md
+        @include layouts_mixins.rightBackground
+        background-position: 100% 50%
+
+    @include base_mixins.lg
+        @include layouts_mixins.rightBackground
+        background-position: 100% 50%
+
+.background-home
+    background-color: variables.$secondary-color
+    color: variables.$secondary-text
+    background-position: 100% 30%
+    @include layouts_mixins.rightBackground
+
+.main-home
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    align-items: center
+
+    @include base_mixins.md
+        max-width: 50%
+        margin: 5rem auto 0
+
+    @include base_mixins.lg
+        width: 40%
+        margin: 5rem auto 0
+        padding: 0
+
+    &-pet
+        flex-grow: 1
+
+        @include base_mixins.md
+            padding: 3rem
+            margin-top: 3rem
+
+        @include base_mixins.lg
+            padding: 5rem
+            margin-top: 3rem
+
+    &-logo
+        margin: 1.5rem
+        width: 50%
+
+    &-title
+        font-weight: 600
+        margin: 1rem
+        text-align: center
+
+    &-desc
+        margin: 1rem
+        text-align: center
+        line-height: 1.3
+
+        &-blue
+            color: variables.$secondary-color
+
+        &-pet
+            padding: 0 3rem
+            z-index: 1
+            margin-top: 3rem
+
+    &-menu
+        display: flex
+        flex-direction: column
+
+    &-figure
+        width: 100%
+        margin: 1.5rem auto -4rem
+        z-index: -1
+        max-width: 300px
+
+h1
+    font-size: 1.5rem
+
+.m-1
+    margin: 1rem!important
+
+.m-0
+    margin: 0!important
+
+.p-1
+    padding: 1rem!important
+
+.p-2
+    padding: 2rem!important
+
+a
+    font-size: .9rem
+    color: variables.$tertiary-color
+    text-decoration: none
+
+.card-group
+    display: grid
+    gap: 1rem
+
+    @include base_mixins.md
+        grid-template-columns: 1fr 1fr
+
+    @include base_mixins.lg
+        grid-template-columns: 1fr 1fr 1fr
+
+textarea
+    resize: vertical
+    width: 100%!important
+
+.d-none
+    display: none

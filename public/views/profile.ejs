@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" defer></script>
+    <script src="https://raw.githubusercontent.com/igorescobar/jQuery-Mask-Plugin/master/dist/jquery.mask.min.js" defer>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+    <script src="./js/default.js" defer></script>
+    <script src="./js/profile.js" defer></script>
+</head>
+
+<body class="background background-sm-none">
+    <!-- NAVBAR -->
+    <div id="nav" class="nav nav-profile-active nav-invert-index">
+        <%- include('./template/nav'); %>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main-home p-2">
+        <p class="main-home-desc main-home-desc-blue">
+            Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.
+        </p>
+        <form class="form form-background" id="form-profile" enctype="multipart/form-data">
+            <div class="form-background-title">Perfil</div>
+            <fieldset class="form-fieldset">
+                <label for="image" class="form-fieldset-label form-background-fieldset-label">Foto</label>
+                <div class="form-profile-image">
+                    <% if (session.user.image !== null) { %>
+                    <img src="<%-session.user.image%>" alt="Perfil">
+                    <% } else { %>
+                    <i class="far fa-user"></i>
+                    <%}%>
+                </div>
+                <input type="file" id="image" name="image" accept=".jpg,.png,.jpeg" class="d-none"/>
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="name" class="form-fieldset-label form-background-fieldset-label">Nome</label>
+                <input type="text" id="name" name="name" class="form-fieldset-field form-background-fieldset-field"
+                    value="<%-session.user.name%>" placeholder="Insira seu nome completo" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="phone" class="form-fieldset-label form-background-fieldset-label">Telefone</label>
+                <input type="text" id="phone" name="phone" class="form-fieldset-field form-background-fieldset-field"
+                    value="<%-session.user.phone%>" placeholder="Insira seu telefone e/ou whatsapp" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="city" class="form-fieldset-label form-background-fieldset-label">Cidade</label>
+                <input type="text" id="city" name="city" class="form-fieldset-field form-background-fieldset-field"
+                    value="<%-session.user.city%>" placeholder="Cidade" />
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <label for="about" class="form-fieldset-label form-background-fieldset-label">Sobre</label>
+                <textarea id="about" name="about" class="form-fieldset-field form-background-fieldset-field"
+                    placeholder="Escreva sobre você" rows="5"><%-session.user.about%></textarea>
+            </fieldset>
+            <fieldset class="form-checkbox">
+                <input type="checkbox" id="remove_image" name="remove_image" value="1" />
+                <label for="remove_image">Remover imagem de perfil</label>
+            </fieldset>
+            <p class="caption-profile-image">
+                Clique na foto para selecionar a nova imagem e depois em "Salvar" para aplicação a alteração.
+            </p>
+            <button class="btn m-1" type="button" id="btn-edit-profile">Salvar</button>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('./template/footer'); %>
+</body>
+
+</html>

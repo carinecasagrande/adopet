@@ -1,0 +1,31 @@
+<div class="nav-background">
+    <img src="./image/figure_1.svg" aria-label="false">
+</div>
+<nav class="nav-menu">
+    <a href="/" class="nav-menu-item nav-menu-item-logo">
+        <img src="./image/logo-white.svg" alt="Adopet">
+    </a>
+    <a href="/" class="nav-menu-item">
+        <img src="./image/home.svg" alt="Página Inicial">
+    </a>
+    <% if (session.loggedin) { %>
+    <a href="./contact" class="nav-menu-item">
+        <img src="./image/message.svg" alt="Mensagens">
+    </a>
+    <% } %>
+</nav>
+<div class="nav-profile">
+    <a href="/profile" title="Perfil" class="icon">
+        <% if (!session.loggedin || session.user.image == null) { %>
+        <i class="far fa-user"></i>
+        <% } else { %>
+        <img src="<%-session.user.image%>" alt="Perfil">
+        <% } %>
+    </a>
+    <a href="/logout" title="Sair" class="icon">
+        <i class="fas fa-sign-out"></i>
+    </a>
+</div>
+<div class="nav-paws">
+    <img src="./image/paws.png" aria-label="false">
+</div>

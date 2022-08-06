@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/pets.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/321fe63c30.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+    <script src="./js/default.js" defer></script>
+    <script src="./js/pets.js" defer></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="nav" class="nav nav-profile-active nav-invert-index">
+        <%- include('./template/nav'); %>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main-home-pet">
+        <p class="main-home-desc main-home-desc-blue main-home-desc-pet">
+            Olá! Veja os amigos disponíveis para adoção!
+        </p>
+        <div class="card-group"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('./template/footer'); %>
+</body>
+
+</html>

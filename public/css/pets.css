@@ -1,0 +1,9 @@
+.message {
+    text-align: center;
+    grid-column: span 3;
+}
+
+.card-info-contact {
+    color: inherit;
+    cursor: pointer;
+}
