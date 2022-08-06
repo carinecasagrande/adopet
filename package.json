@@ -1,11 +1,10 @@
 {
   "name": "adopet",
-  "start": "npm i ; node app.js",
   "version": "1.0.0",
   "description": "Resolution of the fourth frontend challenge proposed by Alura.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm i ; node app.js"
   },
   "author": "Carine Casagrande",
   "license": "ISC",
