@@ -1,6 +1,6 @@
 {
   "name": "adopet",
-  "start": "node app.js",
+  "start": "npm i ; node app.js",
   "version": "1.0.0",
   "description": "Resolution of the fourth frontend challenge proposed by Alura.",
   "main": "app.js",
