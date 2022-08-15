@@ -11,7 +11,7 @@ class database {
     updateUser(req) {
         return new Promise(async (resolve, reject) => {
             var conn = this.connect();
-            var sql = "UPDATE `user` SET ? WHERE (`id` = '1');";
+            var sql = "UPDATE `user` SET ? WHERE (`id` = '" + req.session.user.id + "');";
             var obj = {
                 name: req.body.name,
                 phone: req.body.phone == "" ? null : req.body.phone.replace(/[^0-9]/g, ''),
