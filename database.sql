@@ -3,7 +3,7 @@ CREATE TABLE `user` (
     `email` varchar(256) COLLATE utf8_bin NOT NULL,
     `name` varchar(100) COLLATE utf8_bin NOT NULL,
     `password` varchar(226) COLLATE utf8_bin NOT NULL,
-    `profile_image` blob DEFAULT NULL,
+    `image` blob DEFAULT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
