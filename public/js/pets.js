@@ -8,7 +8,7 @@ function loadPetsList() {
             type: 'GET',
         }).done(function (res) {
             if (res.length <= 0) {
-                $('.card-group').html(`<p class='message'>Ainda não temos nenhum pet diponível 😞</p>`);
+                $('.card-group').html(`<p class='message'>Ainda não temos nenhum pet disponível 😞</p>`);
             } else {
                 for (var i in res) {
                     const pet = res[i];

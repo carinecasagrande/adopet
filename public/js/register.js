@@ -61,7 +61,7 @@ function register() {
                 contentType: 'application/json; charset=utf-8',
             }).done(function (res) {
                 $('#form-register')[0].reset();
-                toastr.success('Cadastro realizado com sucess.', 'Oba!');
+                toastr.success('Cadastro realizado com sucesso.', 'Oba!');
                 setTimeout(() => {
                     window.open('/', '_self');
                 }, 1000);
