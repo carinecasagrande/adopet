@@ -32,6 +32,7 @@ class database {
             ];
 
             conn.query(sql, bean, function (err, result, fields) {
+                conn.end();
                 if (err != null) {
                     reject(err.sqlMessage);
                 } else {
@@ -46,6 +47,7 @@ class database {
             var conn = this.connect();
             var sql = "SELECT * FROM `" + table + "` WHERE `" + field + "` = '" + value + "' LIMIT 1";
             conn.query(sql, function (err, result) {
+                conn.end();
                 if (err != null) {
                     reject(err.sqlMessage);
                 } else if (result.length == 0) {
@@ -62,6 +64,7 @@ class database {
             var conn = this.connect();
             var sql = "SELECT * FROM `" + table + "`";
             conn.query(sql, function (err, result) {
+                conn.end();
                 if (err != null) {
                     reject(err.sqlMessage);
                 } else {
@@ -84,6 +87,7 @@ class database {
                 ]
             ]
             conn.query(sql, bean, function (err, result, fields) {
+                conn.end();
                 if (err != null) {
                     reject(err.sqlMessage);
                 } else {
@@ -105,6 +109,7 @@ class database {
                 ]
             ];
             conn.query(sql, bean, function (err, result, fields) {
+                conn.end();
                 if (err != null) {
                     reject(err.sqlMessage);
                 } else {
