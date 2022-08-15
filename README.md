@@ -2,7 +2,7 @@
 Resolution of the fourth frontend challenges proposed by [Alura](https://www.alura.com.br/).
 
 ### Result
-The result can be seen [here](https://dashboard.heroku.com/apps/carinecasagrande-adopet/settings).
+The result can be seen [here](https://carinecasagrande-adopet.herokuapp.com/).
 
 ### Technologies
 - HTML
